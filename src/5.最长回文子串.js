@@ -45,3 +45,27 @@ var longestPalindrome = function (s) {
 };
 // @lc code=end
 
+longestPalindrome = function (str) {
+    let len = str.length
+    if (len === 1) return str
+    let start = 0, end = 0, max = 0
+
+    const isPalidrome = (l, r) => {
+        while(l>= 0 && r <= len && str[l] === str[i]) {
+            l--
+            r++
+        }
+        let temp = r - l + 1
+        if (max < temp) {
+            start = l
+            end = r
+        }
+    }
+
+    for (let i = 0; i < str.length - 1; i++) {
+        let len1 = isPalidrome(i, i)
+        let len2 = isPalidrome(i, i + 1)
+    }
+    return str.substring(r, l + 1)
+}
+

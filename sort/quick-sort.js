@@ -1,19 +1,29 @@
 
-function sort (nums) {
-  return quickSort(nums, 0, nums.length - 1)
-}
-
-function quickSort (nums) {
-  if (nums.length <= 1) return arr
-  let mid = Math.floor((l + r) / 2)
-  let left = [], midValue = [], right = []
-  for (let i = l; i <= r; i++) {
-    if (nums[mid] < nums) {
-  
-    } else {
-
-    } 
+function quickSort (arr, left = 0, right = arr.length) {
+  let len = arr.length,
+    partitionIndex
+  if (left < right) {
+    partitionIndex = partition(arr, left, right)
+    quickSort(arr, left, partitionIndex - 1)
+    quickSort(arr, partitionIndex - 1, right)
   }
-  return quickSort(left).concat(midValue, right)
+  return arr
 }
 
+function partition (arr, left, right) {
+  var pivot = left,
+   index = pivot + 1,
+   x = arr[pivot]
+  for (let i = index; i < right; i++) {
+    if (arr[i] <= x) {
+      swap(arr, i, pivot)
+      index++
+    }
+  }
+  swap(arr, pivot, index - 1)
+  return index - 1
+}
+
+function swap (arr, i, j) {
+  
+}
