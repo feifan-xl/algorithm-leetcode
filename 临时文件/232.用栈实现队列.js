@@ -1,7 +1,14 @@
+/*
+ * @lc app=leetcode.cn id=232 lang=javascript
+ *
+ * [232] 用栈实现队列
+ */
+
+// @lc code=start
 
 var MyQueue = function() {
-  this.removeStack = []
   this.insertStack = []
+  this.removeStack = []
 };
 
 /** 
@@ -21,7 +28,8 @@ MyQueue.prototype.pop = function() {
       this.removeStack.push(this.insertStack.pop())
     }
   }
-  return this.removeStack.pop()
+  let temp = this.removeStack.pop()
+  return temp
 };
 
 /**
@@ -33,14 +41,14 @@ MyQueue.prototype.peek = function() {
       this.removeStack.push(this.insertStack.pop())
     }
   }
-  return this.removeStack.pop()
+  return this.removeStack[this.removeStack.length - 1]
 };
 
 /**
  * @return {boolean}
  */
 MyQueue.prototype.empty = function() {
-
+  return (this.insertStack.length + this.removeStack.length) === 0
 };
 
 /**
@@ -51,3 +59,5 @@ MyQueue.prototype.empty = function() {
  * var param_3 = obj.peek()
  * var param_4 = obj.empty()
  */
+// @lc code=end
+
