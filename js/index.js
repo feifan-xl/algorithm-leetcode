@@ -6,9 +6,9 @@
 // 03. Object.create
 // 04. Object.assign
 // 05. filter
-// 06.reduce
+// 06. reduce
 // 06. flat
-// 07.call
+// 07. call
 // 08. apply
 // 09. bind
 // 10. debounce
@@ -345,7 +345,18 @@ function run (genF) {
 
 
 // 20. 继承
+function Parent () {
+  this.name = 'P'
+}
+// 原型
+function Child () {}
+Child.prototype = new Parent()
+Child.prototype.constructor = Child
 
+// 构造
+function Child () {
+  Parent.call()
+}
 
 
 
@@ -387,4 +398,3 @@ function add (...arg1) {
   }
   return _add
 }
-
