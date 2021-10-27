@@ -1,4 +1,8 @@
 /**
+ * 思路: 两个栈 一个维护正常数据 另一个维护最小值
+ */
+
+/**
  * initialize your data structure here.
  */
  var MinStack = function() {
