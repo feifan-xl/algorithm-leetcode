@@ -1,0 +1,25 @@
+{
+  "name": "algorithm-leetcode",
+  "version": "1.0.0",
+  "description": "For improving algorithm skills and interview",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest ./test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feifan-xl/algorithm-leetcode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/feifan-xl/algorithm-leetcode/issues"
+  },
+  "homepage": "https://github.com/feifan-xl/algorithm-leetcode#readme",
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "@types/node": "^17.0.0",
+    "jest": "^27.4.5"
+  }
+}
